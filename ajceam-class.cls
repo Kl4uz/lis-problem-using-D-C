@@ -136,8 +136,8 @@
 \def\abstract#1{\gdef\@englishabstract{#1}}  % Abstract in English
 \newcommand{\abstractpt}[1]{\def\@abstractpt{#1}} 
 \def\keywords#1{\gdef\@englishkeywords{#1}}        % Keywords in English
-\def\resumo#1{\gdef\@portugueseabstract{#1}}        % Resumen en inglés
-\def\palavraschave#1{\gdef\@portuguesekeywords{#1}}        % Palabras clave en inglés
+\def\resumo#1{\gdef\@portugueseabstract{#1}}        % Resumen en inglês
+\def\palavraschave#1{\gdef\@portuguesekeywords{#1}}        % Palabras clave en inglês
 
 % Definition for contact data
 \def\contactauthor#1{\gdef\@thecontactauthor{#1}}
@@ -294,9 +294,7 @@
         \noindent {\fontsize{9}{12} \selectfont {\bfseries{Keywords}}---\@englishkeywords} \par
       \fi
       \iflang@por
-        \noindent {\fontsize{9}{12} \selectfont {\bfseries{Resumo}}---\@portugueseabstract} \par
-        \vspace{0.3cm}
-        \noindent {\fontsize{9}{12} \selectfont {\bfseries{Palavras-chave}}---\@portuguesekeywords} \par
+        \noindent {\fontsize{9}{12} \selectfont {\bfseries{Resumo}}---\@abstractpt} \par
         \vspace{0.3cm}
         \noindent {\fontsize{9}{12}\itshape \selectfont {\bfseries{Abstract}}---\@englishabstract} \par
         \vspace{0.3cm}
@@ -313,9 +311,9 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
-\fancyhead[LO]{\vcenteredinclude{ajceam_logo.pdf}}
+\fancyhead[LO]{\vcenteredinclude{ajceam_logo.pdf}} % Comment this out if ajceam_logo.pdf is missing
 \fancyhead[CO]{ }
-\fancyhead[RO]{{\fontsize{7}{10} \selectfont ACADEMIC JOURNAL ON COMPUTING, ENGINEERING AND APPLIED MATHEMATICS, VOL.~\@thevolume, NO.~\@thenumber, \@themonth~\@theyear}}
+\fancyhead[RO]{{\fontsize{7}{10} \selectfont ACADEMIC JOURNAL ON COMPUTING, ENGINEERING AND APPLIED MATHEMATICS, \@themonth \@theyear}}
 \fancyhead[LE]{ }
 \fancyhead[CE]{{\fontsize{7}{10} \selectfont \MakeUppercase{\@theshorttitle}}}
 \fancyhead[RE]{{\fontsize{7}{10} \selectfont \authorheader}}
